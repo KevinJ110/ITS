@@ -555,15 +555,38 @@ button{font-family:inherit;}
 .portfolio-thumb{
   height:170px;
   background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  position:relative;
+  overflow:hidden;
 }
-.thumb-1{background:linear-gradient(135deg,#3FA9F5,#0A4D8C);}
+.portfolio-thumb::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,0));
+  pointer-events:none;
+}
+.thumb-1{background:linear-gradient(135deg,#a3bfd2,#8cb7df);}
 .thumb-2{background:linear-gradient(135deg,#00C2FF,#083B6F);}
 .thumb-3{background:linear-gradient(135deg,#0A4D8C,#00C2FF);}
 .thumb-4{background:linear-gradient(135deg,#083B6F,#3FA9F5);}
 .thumb-5{background:linear-gradient(135deg,#3FA9F5,#00C2FF);}
 .thumb-6{background:linear-gradient(135deg,#0A4D8C,#083B6F);}
-.portfolio-card h3{font-size:1rem; margin:18px 22px 4px;}
-.portfolio-card p{font-size:.85rem; color:var(--text-soft); margin:0 22px 20px;}
+.portfolio-card h3{font-size:1rem; margin:18px 22px 6px;}
+.portfolio-card p{font-size:.85rem; color:var(--text-soft); margin:0 22px 12px;}
+.portfolio-link{
+  display:inline-flex;
+  align-items:center;
+  margin:0 22px 20px;
+  font-size:.82rem;
+  font-weight:600;
+  color:var(--primary);
+}
+.portfolio-link:hover{color:var(--accent);}
 
 /* ---------- Testimonials ---------- */
 .testimonial-grid{
@@ -656,10 +679,16 @@ button{font-family:inherit;}
   border-radius:50%;
   border:1px solid rgba(255,255,255,.3);
   display:flex; align-items:center; justify-content:center;
-  font-size:.75rem; font-weight:700;
+  color:var(--white);
   transition:.25s var(--ease);
 }
 .social-row a:hover{background:var(--accent); color:var(--primary-dark); border-color:var(--accent);}
+.social-row svg{
+  width:18px;
+  height:18px;
+  display:block;
+  fill:currentColor;
+}
 
 .contact-form{
   background:var(--white);

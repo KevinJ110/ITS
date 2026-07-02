@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://integratedtechnologysolutions.co.za/sitemap.xml
